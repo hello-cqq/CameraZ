@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.DecodeActivity">
+
+
+    <ImageView
+        android:id="@+id/decode_image"
+        android:layout_width="200dp"
+        android:layout_height="266dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/op_code_shape"
+        android:cropToPadding="true"
+        android:forceDarkAllowed="false"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/add" />
+
+    <TextView
+        android:id="@+id/recognize_result"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/decode_image"
+        android:layout_marginStart="@dimen/common_margin_start_end"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/common_margin_start_end"
+        android:background="@drawable/op_code_shape"
+        android:gravity="center"
+        android:scrollbars="vertical"
+        android:text="@string/decode_result_show_tip"
+        android:textIsSelectable="true"
+        android:textSize="14dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/decode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recognize_result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/decode_text"
+        android:textSize="16dp"
+        android:theme="@style/Theme.MaterialComponents.Light" />
+
+    <include layout="@layout/appbar_with_divider_layout" />
+
+</RelativeLayout>

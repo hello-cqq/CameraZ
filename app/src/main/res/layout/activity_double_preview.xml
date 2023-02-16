@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ahahahq.cameraz.view.CameraView
+        android:id="@+id/camera_view_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pinchToZoom="true"
+        app:viewMode="surface_texture" />
+
+    <com.ahahahq.cameraz.view.CameraView
+        android:id="@+id/camera_view_font"
+        android:layout_width="@dimen/camera_font_size"
+        android:layout_height="@dimen/camera_font_size"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        app:draggable="true"
+        app:pinchToZoom="true"
+        app:radius="75dp"
+        app:viewMode="surface_texture" />
+
+    <include layout="@layout/appbar_with_divider_layout" />
+</RelativeLayout>

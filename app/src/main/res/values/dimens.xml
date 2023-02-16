@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="camera_font_size">150dp</dimen>
+    <dimen name="camera_multi_width">320dp</dimen>
+    <dimen name="camera_multi_height">240dp</dimen>
+    <dimen name="qrcode_size">200dp</dimen>
+    <dimen name="hand_size">40dp</dimen>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="qr_code_bg_color">#FFFFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Widget -->
+    <color name="big_tag_text_color">#FFFFFFFF</color>
+    <color name="big_tag_color">#FFFF7123</color>
+    <color name="small_tag_color">#FFFFCB1B</color>
+    <color name="console_background">#11000000</color>
+    <color name="black_alpha55">#8c000000</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="glide_product_bg">#f4f4f4</color>>
+
+    <!--Full Page Guides-->
+    <color name="title_text_color_black_alpha_100">#FF000000</color>
+    <color name="subtitle_text_color_black_alpha_50">#80000000</color>
+    <color name="navigation_bar_color">#FFFFFFFF</color>
+</resources>

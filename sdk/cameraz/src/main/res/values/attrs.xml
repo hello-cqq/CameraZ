@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CameraView">
+        <attr name="viewMode" format="integer">
+            <enum name="surface_view" value="0" />
+            <enum name="surface_texture" value="1" />
+        </attr>
+        <attr name="autoZoom" format="boolean" />
+        <attr name="pinchToZoom" format="boolean" />
+        <attr name="draggable" format="boolean" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="StarScanView">
+        <attr name="displayArea" format="integer">
+            <enum name="rect" value="0" />
+            <enum name="ellipse" value="1" />
+        </attr>
+        <attr name="starSize" format="dimension" />
+        <attr name="starCount" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="LineScanView">
+        <attr name="speed" format="integer" />
+        <attr name="type" format="integer">
+            <enum name="green" value="0" />
+            <enum name="red" value="1" />
+            <enum name="blue" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

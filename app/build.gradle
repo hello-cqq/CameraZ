@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply from: rootProject.projectDir.path + '/config/base.gradle'
+apply from: rootProject.projectDir.path + '/config/test.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.ahahahq.scandemo"
+        versionName appVersionName
+        versionCode appVersionCode as Integer
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        archivesBaseName = prop_archivesBaseName
+    }
+    signingConfigs {
+        testkey {
+            storeFile file("../keystore/scandemo-keystore.jks")
+            keyAlias 'scandemo'
+            keyPassword '000000'
+            storePassword '000000'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.testkey
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    viewBinding {
+        enabled = true
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+dependencies {
+    implementation project(":common")
+    implementation project(':sdk:cameraz')
+    implementation project(':sdk:barcode')
+    implementation "androidx.appcompat:appcompat:${androidx_appcompat_version}"
+    implementation "com.google.android.material:material:${material_version}"
+}

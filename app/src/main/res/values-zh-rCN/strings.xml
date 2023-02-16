@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="decode_text">解码</string>
+    <string name="parse_text">解析</string>
+    <string name="decode_result_show_tip">结果展示</string>
+    <string name="generate_qr_code">生成</string>
+    <string name="scan_module">扫码</string>
+    <string name="pic_module">拍照</string>
+    <string name="decode_module">解码</string>
+    <string name="qrcode_module">二维码</string>
+    <string name="multi_module">前后双摄</string>
+    <string name="double_module">后置多摄</string>
+    <string name="cancel">取消</string>
+</resources>

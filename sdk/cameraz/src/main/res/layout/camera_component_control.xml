@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/control_panel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:background="#26000000"
+    android:splitMotionEvents="false">
+
+    <View
+        android:id="@+id/menu_line"
+        android:layout_width="30dp"
+        android:layout_height="1.3dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:forceDarkAllowed="false" />
+
+    <RelativeLayout
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/menu_line">
+
+        <com.ahahahq.cameraz.ui.RotateImageView
+            android:id="@+id/iv_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/album_drawable" />
+
+        <com.ahahahq.cameraz.ui.RotateImageView
+            android:id="@+id/iv_shot"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/shot" />
+
+        <com.ahahahq.cameraz.ui.RotateImageView
+            android:id="@+id/iv_torch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/torch_drawable" />
+    </RelativeLayout>
+
+</RelativeLayout>

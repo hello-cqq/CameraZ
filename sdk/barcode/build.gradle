@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.projectDir.path + '/config/base.gradle'
+
+android {
+    defaultConfig {
+        minSdk 21
+        consumerProguardFiles "consumer-rules.pro"
+    }
+}
+
+dependencies {
+    implementation "com.google.zxing:core:3.4.1"
+}

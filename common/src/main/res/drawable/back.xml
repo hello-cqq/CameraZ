@@ -1,0 +1,16 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="24dp"
+    android:height="24dp"
+    android:autoMirrored="true"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <group android:name="group">
+        <path
+            android:name="path_width"
+            android:pathData="M 58 36 L 12 36 M 30 18 L 12.3 35.293 C 11.9 35.683 11.9 36.317 12.3 36.707 L 30 54"
+            android:strokeColor="#000000"
+            android:strokeWidth="4"/>
+    </group>
+</vector>

@@ -1,0 +1,5 @@
+rootProject.name = "CameraZ"
+include ':app'
+include ':common'
+include ':sdk:cameraz'
+include ':sdk:barcode'

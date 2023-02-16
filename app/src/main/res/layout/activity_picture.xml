@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ahahahq.cameraz.view.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pinchToZoom="true"
+        app:viewMode="surface_texture" />
+
+    <com.ahahahq.cameraz.ui.StarScanView
+        android:id="@+id/scan_star"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="30dp"
+        android:visibility="visible"
+        app:displayArea="ellipse"
+        app:starCount="40"
+        app:starSize="7dp" />
+
+    <include
+        android:id="@+id/camera_component_control"
+        layout="@layout/camera_component_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <include layout="@layout/appbar_with_divider_layout" />
+</RelativeLayout>

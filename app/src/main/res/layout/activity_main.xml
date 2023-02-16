@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_title"
+        style="@style/main_title_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/app_name"
+        android:textSize="24dp" />
+
+    <GridLayout
+        android:id="@+id/sub_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_title"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/common_margin_start_end"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/common_margin_start_end"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_scan_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:minWidth="120dp"
+            android:text="@string/scan_module"
+            android:textSize="16dp"
+            android:theme="@style/Theme.MaterialComponents.Light" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_pic_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:minWidth="120dp"
+            android:text="@string/pic_module"
+            android:textSize="16dp"
+            android:theme="@style/Theme.MaterialComponents.Light" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_decode_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:minWidth="120dp"
+            android:text="@string/decode_module"
+            android:textSize="16dp"
+            android:theme="@style/Theme.MaterialComponents.Light" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_code_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:minWidth="120dp"
+            android:text="@string/qrcode_module"
+            android:textSize="16dp"
+            android:theme="@style/Theme.MaterialComponents.Light" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/double_preview_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:minWidth="120dp"
+            android:text="@string/double_module"
+            android:textSize="16dp"
+            android:theme="@style/Theme.MaterialComponents.Light" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/multi_preview_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:minWidth="120dp"
+            android:text="@string/multi_module"
+            android:textSize="16dp"
+            android:theme="@style/Theme.MaterialComponents.Light" />
+    </GridLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.projectDir.path + '/config/base.gradle'
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:${androidx_appcompat_version}"
+    implementation "com.google.android.material:material:${material_version}"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${androidx_lifecycle_version}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${kotlinx_coroutines_version}"
+}

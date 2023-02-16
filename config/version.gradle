@@ -1,0 +1,8 @@
+ext {
+    gradle_version = "7.1.2"
+    kotlin_version = "1.7.10"
+    kotlinx_coroutines_version = '1.6.1'
+    androidx_lifecycle_version = '2.5.1'
+    androidx_appcompat_version = '1.4.1'
+    material_version = "1.5.0"
+}

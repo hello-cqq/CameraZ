@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="decode_text">decode</string>
+    <string name="parse_text">parse</string>
+    <string name="decode_result_show_tip">show result</string>
+    <string name="generate_qr_code">generate</string>
+    <string name="scan_module">Scan</string>
+    <string name="pic_module">Picture</string>
+    <string name="decode_module">Decode</string>
+    <string name="qrcode_module">QR-Code</string>
+    <string name="multi_module">Multi Preview</string>
+    <string name="double_module">Double Preview</string>
+    <string name="cancel">cancel</string>
+</resources>
