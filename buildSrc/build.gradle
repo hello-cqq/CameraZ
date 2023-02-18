@@ -1,7 +1,8 @@
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'kotlin'
 buildscript {
-    apply from: 'config/version.gradle'
+    apply from: '../config/version.gradle'
     repositories {
-        mavenLocal()
         google()
         mavenCentral()
     }
@@ -15,14 +16,18 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenLocal()
         google()
         mavenCentral()
-        flatDir {
-            dirs 'libs'
+    }
+}
+gradlePlugin {
+    plugins{
+        PublishPlugin {
+            id = "Q-Publish"
+            implementationClass = "com.ahahahq.gradle.PublishPlugin"
         }
     }
 }
-task clean(type: Delete) {
-    delete rootProject.buildDir
+dependencies {
+    implementation "com.android.tools.build:gradle:$gradle_version"
 }
