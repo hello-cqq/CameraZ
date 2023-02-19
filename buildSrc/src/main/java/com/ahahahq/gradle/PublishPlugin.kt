@@ -30,22 +30,22 @@
 */
 package com.ahahahq.gradle
 
-import com.android.build.api.artifact.SingleArtifact
 import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.jvm.tasks.Jar
+import org.gradle.plugins.signing.SigningExtension
 import java.net.URI
 
 class PublishPlugin : Plugin<Project> {
     companion object {
         private const val PLUGIN_MAVEN_PUBLISH = "maven-publish"
+        private const val PLUGIN_SIGN = "signing"
         private const val SOURCE_JAR = "sourceJar"
-        private const val SNAPSHOT_MAVEN_NAME = "release"
-        private const val SNAPSHOT_MAVEN_URL =
-            "https://s01.oss.sonatype.org/content/repositories/releases/"
+        private const val MAVEN_NAME = "release"
+        private const val MAVEN_URL = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
     }
 
     override fun apply(target: Project) {
@@ -58,12 +58,14 @@ class PublishPlugin : Plugin<Project> {
     }
 
     private fun createPublishTask(target: Project, extension: PublishExtension) {
-        if (target.plugins.hasPlugin(PLUGIN_MAVEN_PUBLISH)) {
+        if (target.plugins.hasPlugin(PLUGIN_MAVEN_PUBLISH) || target.plugins.hasPlugin(PLUGIN_SIGN)) {
             return
         }
         target.plugins.apply(PLUGIN_MAVEN_PUBLISH)
+        target.plugins.apply(PLUGIN_SIGN)
         val libExtension = target.extensions.getByType(LibraryExtension::class.java)
         val publishing = target.extensions.getByType(PublishingExtension::class.java)
+        val signing = target.extensions.getByType(SigningExtension::class.java)
         if (extension.needSource) {
             target.tasks.create(SOURCE_JAR, Jar::class.java) {
                 it.group = "publishing"
@@ -74,8 +76,8 @@ class PublishPlugin : Plugin<Project> {
         publishing.repositories { r ->
             r.maven {
                 it.isAllowInsecureProtocol = true
-                it.name = extension.mavenName ?: SNAPSHOT_MAVEN_NAME
-                it.url = URI.create(extension.mavenUrl ?: SNAPSHOT_MAVEN_URL)
+                it.name = extension.mavenName ?: MAVEN_NAME
+                it.url = URI.create(extension.mavenUrl ?: MAVEN_URL)
                 it.credentials.username = extension.userName
                 it.credentials.password = extension.password
             }
@@ -92,13 +94,35 @@ class PublishPlugin : Plugin<Project> {
                             m.artifact(target.tasks.findByPath(SOURCE_JAR))
                         }
                         m.pom { pom ->
+                            pom.packaging = "aar"
                             pom.name.set(m.artifactId)
                             extension.description?.let { pom.description.set(it) }
                             extension.openUrl?.let { pom.url.set(it) }
+                            pom.scm { scm ->
+                                extension.openUrl?.let { scm.url.set(it) }
+                                extension.scmUrl?.let {
+                                    scm.developerConnection.set(it)
+                                    scm.connection.set(it)
+                                }
+                            }
+                            pom.licenses { spec ->
+                                spec.license { lic ->
+                                    lic.name.set("The Apache License, Version 2.0")
+                                    lic.url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                                }
+                            }
+                            pom.developers { devs ->
+                                devs.developer { dev ->
+                                    dev.id.set("AhahahQ")
+                                    dev.name.set("AhahahQ")
+                                    dev.email.set("hey.cqq@gmail.com")
+                                }
+                            }
                         }
                     }
                 }
             }
         }
+        signing.sign(publishing.publications)
     }
 }

@@ -8,7 +8,7 @@
     <string name="pic_module">拍照</string>
     <string name="decode_module">解码</string>
     <string name="qrcode_module">二维码</string>
-    <string name="multi_module">前后双摄</string>
-    <string name="double_module">后置多摄</string>
+    <string name="multi_module">后置多摄</string>
+    <string name="double_module">前后双摄</string>
     <string name="cancel">取消</string>
 </resources>

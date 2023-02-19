@@ -44,5 +44,6 @@ open class PublishExtension {
     var version: String? = null
     var description: String? = null
     var openUrl: String? = null
+    var scmUrl: String? = null
     var needSource = false
 }

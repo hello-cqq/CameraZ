@@ -1,19 +1,20 @@
 apply plugin: 'com.android.library'
 apply from: rootProject.projectDir.path + '/config/base.gradle'
-apply from: rootProject.projectDir.path + '/config/github.gradle'
+apply from: rootProject.projectDir.path + '/config/maven.gradle'
 apply plugin: 'Q-Publish'
 
 QPublish {
-    mavenName = githubPkg.name
-    mavenUrl = githubPkg.url
-    userName = githubPkg.userName
-    password = githubPkg.password
-    groupId = "com.ahahahq.scan"
+    mavenName = mavenCentral.name
+    mavenUrl = mavenCentral.url
+    userName = mavenCentral.userName
+    password = mavenCentral.password
+    groupId = "io.github.hello-cqq"
     artifactId = "barcode"
     version = "1.0.0"
     description = "QR-Code codec library based on zxing implementation"
     needSource = true
     openUrl = "https://github.com/hello-cqq/CameraZ"
+    scmUrl = "https://github.com/hello-cqq/CameraZ.git"
 }
 
 android {

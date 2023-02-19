@@ -1,0 +1,17 @@
+def propertiesFile = project.rootProject.file('local.properties')
+def properties = new Properties()
+if (propertiesFile.exists()) {
+    properties.load(propertiesFile.newDataInputStream())
+}
+ext.githubPkg = [
+        name    : properties.getProperty('GitHubMavenName'),
+        url     : properties.getProperty('GitHubMavenUrl'),
+        userName: properties.getProperty('gpr.usr'),
+        password: properties.getProperty('gpr.key')
+]
+ext.mavenCentral = [
+        name    : properties.getProperty('MavenCentralName'),
+        url     : properties.getProperty('MavenCentralUrl'),
+        userName: properties.getProperty('ossrh.username'),
+        password: properties.getProperty('ossrh.password')
+]

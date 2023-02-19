@@ -39,8 +39,10 @@ android {
 }
 dependencies {
     implementation project(":common")
-    implementation project(':sdk:cameraz')
-    implementation project(':sdk:barcode')
+    implementation "io.github.hello-cqq:cameraz:1.0.0"
+    implementation "io.github.hello-cqq:barcode:1.0.0"
+    /*implementation project(':sdk:cameraz')
+    implementation project(':sdk:barcode')*/
     implementation "androidx.appcompat:appcompat:${androidx_appcompat_version}"
     implementation "com.google.android.material:material:${material_version}"
 }
