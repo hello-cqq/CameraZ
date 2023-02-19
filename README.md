@@ -129,5 +129,5 @@ override fun onDestroy() {
 
 6. 通常![](https://cdn.nlark.com/yuque/__latex/7f1122aba66682a54d4eed3934855162.svg#card=math&code=b%28%7Bx_%7Bb%7D%7D%20%2A%20%7By_%7Bb%7D%7D%29&id=uWKbS)的值与屏幕大小一致，需要将**b**按照![](https://cdn.nlark.com/yuque/__latex/6cd7b925e4e4d083cae161e8ec51a494.svg#card=math&code=%7Bq_%7B0%7D%7D&id=UYp7h)的比例进行向上调整surface的宽高，最终预览正常。
 <a name="gr2OH"></a>
-## 与其他方案对比
-这里用华为开发者平台的开放能力——[统一扫码服务](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/service-introduction-0000001050041994)做对比，从官网下载的demo，设备使用了OPPO FindN和HUAWEI P10。在折叠屏Find N和华为p10机器上，CameraZ的预览是正常的，而HUAWEI的demo都存在不同程度的拉伸问题，这是因为我们快捷扫码自定义了一套可以适配所有预览窗口大小的预览算法。<br />下图左边是CameraZ，右边是HUAWEI统一扫码服务。<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/333743/1657879586036-82e72c3b-5e67-4a44-9ef6-6e4b80fc1734.png#averageHue=%239c978e&clientId=u8ffec68b-4573-4&from=paste&height=426&id=u08a517b5&name=image.png&originHeight=426&originWidth=1053&originalType=binary&ratio=1&rotation=0&showTitle=false&size=218749&status=done&style=none&taskId=u514c58a4-6057-4c0c-bd98-e5e09faf921&title=&width=1053)
+## 方案对比
+这里用华为开发者平台的开放能力——[统一扫码服务](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/service-introduction-0000001050041994)做对比，从官网下载的demo，设备使用了OPPO FindN和HUAWEI P10。在折叠屏Find N和华为p10机器上，CameraZ的预览是正常的，而HUAWEI的demo都存在不同程度的拉伸问题，这是因为我们快捷扫码自定义了一套可以适配所有预览窗口大小的预览算法。<br />下图左边是CameraZ，右边是HUAWEI统一扫码服务。<br />![image.png](https://cdn.nlark.com/yuque/0/2023/png/333743/1676807593325-09c5e87c-04ee-4196-8b7d-0c24ce593113.png?x-oss-process=image%2Fresize%2Cw_937%2Climit_0)
