@@ -24,7 +24,7 @@ CamearZ是自主开发且开源的一个Android相机预览SDK，目前已推广
 ```groovy
 //需要在根build.gradle引入仓库：mavenCentral
 repositories {
-    mavenLocal()
+    mavenCentral()
 }
 ...
 //引入预览库
