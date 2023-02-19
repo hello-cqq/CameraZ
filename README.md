@@ -23,9 +23,9 @@ CamearZ是自主开发且开源的一个Android相机预览SDK，目前已推广
 ## 引入依赖
 ```groovy
 //引入预览库
-implementation "com.ahahahq.scan:cameraz:1.0.0"
+implementation "io.github.hello-cqq:cameraz:1.0.0"
 //引入条码库
-implementation "com.ahahahq.scan:barcode:1.0.0"
+implementation "io.github.hello-cqq:barcode:1.0.0"
 ```
 <a name="NIQIG"></a>
 ## 扫码使用举例
@@ -85,6 +85,15 @@ private fun clickShotBtn() {
     cameraClient?.let {
         it.takePicture(TAG, pictureCallback)
     }
+}
+
+//关闭
+override fun onDestroy() {
+    super.onDestroy()
+    //关闭相机
+    cameraZ.closeAll()
+    //注意，仅在彻底不使用时再释放(线程)
+    cameraZ.release()
 }
 ```
 <a name="p4Qd7"></a>
